@@ -1,0 +1,13 @@
+{
+  "name": "TomEE Deployment Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "cp ROOT.war /usr/local/tomcat/webapps/ROOT.war",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "remoteUser": "root"
+}
+
